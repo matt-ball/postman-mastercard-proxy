@@ -1,0 +1,69 @@
+{
+  "paths": [
+    {
+      "path": "/addAccount",
+      "toEncrypt": [
+        {
+          "element": "encryptedPayload.encryptedData",
+          "obj": "encryptedPayload"
+        }
+      ],
+      "toDecrypt": []
+    },
+    {
+      "path": "/closeAccount",
+      "toEncrypt": [
+        {
+          "element": "encryptedPayload.encryptedData",
+          "obj": "encryptedPayload"
+        }
+      ],
+      "toDecrypt": []
+    },
+    {
+      "path": "/getPaymentAccountReference",
+      "toEncrypt": [
+        {
+          "element": "encryptedPayload.encryptedData",
+          "obj": "encryptedPayload"
+        }
+      ],
+      "toDecrypt": [
+        {
+          "element": "encryptedPayload",
+          "obj": "encryptedPayload.encryptedData"
+        }
+      ]
+    },
+    {
+      "path": "/updateAccount",
+      "toEncrypt": [
+        {
+          "element": "encryptedPayload.encryptedData",
+          "obj": "encryptedPayload"
+        }
+      ],
+      "toDecrypt": []
+    },
+    {
+      "path": "/overrideForDeleteAccount",
+      "toEncrypt": [
+        {
+          "element": "encryptedPayload.encryptedData",
+          "obj": "encryptedPayload"
+        }
+      ],
+      "toDecrypt": []
+    }
+  ],
+  "oaepPaddingDigestAlgorithm": "SHA-512",
+  "ivFieldName": "iv",
+  "encryptedKeyFieldName": "encryptedKey",
+  "encryptedValueFieldName": "encryptedData",
+  "oaepHashingAlgorithmFieldName": "oaepHashingAlgorithm",
+  "publicKeyFingerprintFieldName": "publicKeyFingerprint",
+  "publicKeyFingerprintType": "publicKey",
+  "dataEncoding": "hex",
+  "encryptionCertificate": "./public.crt",
+  "privateKey": "./private.key"
+}
